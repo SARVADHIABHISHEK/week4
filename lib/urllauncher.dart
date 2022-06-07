@@ -37,8 +37,12 @@ class _UrlLaunchState extends State<UrlLaunch> {
               child: ListTile(
                 title: IconButton(
                     color: Colors.white,
-                    onPressed: () {},
-                    icon: const Icon(FontAwesomeIcons.instagram)),
+                    onPressed: () async {
+                       {
+                         if(!await(launchUrl(Uri.parse('tel:+917600175674'))));
+                       }
+                    },
+                    icon: const Icon(FontAwesomeIcons.phone)),
               ),
             ),
             Container(
@@ -46,7 +50,9 @@ class _UrlLaunchState extends State<UrlLaunch> {
               child: ListTile(
                 title: IconButton(
                     color: Colors.white,
-                    onPressed: () {},
+                    onPressed: () async {
+                      if(!await launchUrl(Uri.parse('https://www.linkedin.com')));
+                    },
                     icon: const Icon(FontAwesomeIcons.linkedinIn)),
               ),
             ),
@@ -55,8 +61,10 @@ class _UrlLaunchState extends State<UrlLaunch> {
               child: ListTile(
                 title: IconButton(
                     color: Colors.white,
-                    onPressed: () {},
-                    icon: const Icon(FontAwesomeIcons.twitter)),
+                    onPressed: () async {
+                      if(!await launchUrl(Uri.parse("mailto:patelabhishek102001@gmail.com")));
+                    },
+                    icon: const Icon(FontAwesomeIcons.inbox)),
               ),
             ),
           ],
